@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="lab2_ChildView" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" tag="9" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aIr-ul-g9M">
+                                <rect key="frame" x="8" y="44" width="400" height="400"/>
+                                <connections>
+                                    <segue destination="DdM-vy-kc2" kind="embed" id="pMP-le-RNH"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" tag="9" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uiE-Uq-hup">
+                                <rect key="frame" x="8" y="462" width="400" height="400"/>
+                                <connections>
+                                    <segue destination="D0W-rO-dph" kind="embed" id="69l-dV-Gmh"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="uiE-Uq-hup" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="9Cw-Xq-4Sk"/>
+                            <constraint firstItem="uiE-Uq-hup" firstAttribute="leading" secondItem="aIr-ul-g9M" secondAttribute="leading" id="IRF-eB-ETl"/>
+                            <constraint firstItem="uiE-Uq-hup" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="NZS-vj-uBK"/>
+                            <constraint firstItem="uiE-Uq-hup" firstAttribute="width" secondItem="aIr-ul-g9M" secondAttribute="width" id="Ozo-oE-sTs"/>
+                            <constraint firstItem="uiE-Uq-hup" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="462" id="SBH-Km-m23"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="uiE-Uq-hup" secondAttribute="trailing" constant="6" id="SxV-rd-AVN"/>
+                            <constraint firstItem="uiE-Uq-hup" firstAttribute="top" secondItem="aIr-ul-g9M" secondAttribute="bottom" constant="18" id="aXT-h2-NML"/>
+                            <constraint firstItem="aIr-ul-g9M" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="lKk-1c-gtT"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
+        </scene>
+        <!--Manage View Controller-->
+        <scene sceneID="tQZ-EQ-glG">
+            <objects>
+                <viewController id="DdM-vy-kc2" customClass="ManageViewController" customModule="lab2_ChildView" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dmn-6k-kV6">
+                        <rect key="frame" x="0.0" y="0.0" width="400" height="400"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fg8-Qv-jlm">
+                                <rect key="frame" x="20" y="30" width="360" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kgE-0a-8Ti">
+                                <rect key="frame" x="20" y="175" width="100" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="OK"/>
+                                <connections>
+                                    <action selector="ok_button:" destination="DdM-vy-kc2" eventType="touchUpInside" id="MYU-F9-kii"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cie-q2-SdL">
+                                <rect key="frame" x="20" y="72" width="100" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Small"/>
+                                <connections>
+                                    <action selector="small_button:" destination="DdM-vy-kc2" eventType="touchUpInside" id="yMp-4P-fTk"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kW1-xV-1Md">
+                                <rect key="frame" x="150" y="72" width="100" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Medium"/>
+                                <connections>
+                                    <action selector="medium_button:" destination="DdM-vy-kc2" eventType="touchUpInside" id="O6e-fi-4Ql"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cHO-At-YeZ">
+                                <rect key="frame" x="280" y="72" width="100" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Large"/>
+                                <connections>
+                                    <action selector="large_button:" destination="DdM-vy-kc2" eventType="touchUpInside" id="H9C-D5-zOl"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dSU-SE-O8x">
+                                <rect key="frame" x="150" y="174" width="100" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Cancel"/>
+                                <connections>
+                                    <action selector="cancel_button:" destination="DdM-vy-kc2" eventType="touchUpInside" id="QYd-f1-5jh"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="bec-3Y-8gG"/>
+                    </view>
+                    <connections>
+                        <outlet property="cancel_button" destination="dSU-SE-O8x" id="1qb-l1-oG4"/>
+                        <outlet property="large_button" destination="cHO-At-YeZ" id="TPZ-HG-cAe"/>
+                        <outlet property="medium_button" destination="kW1-xV-1Md" id="5yC-gM-pcO"/>
+                        <outlet property="ok_button" destination="kgE-0a-8Ti" id="Z1F-hl-daD"/>
+                        <outlet property="small_button" destination="Cie-q2-SdL" id="NaI-1n-YsK"/>
+                        <outlet property="text_field" destination="Fg8-Qv-jlm" id="6Go-zA-cSI"/>
+                        <segue destination="AtD-Ji-lfu" kind="unwind" identifier="unwindToResultViewController" unwindAction="unwindToResultViewControllerWithSender:" id="iAn-wZ-MQ4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lvI-0H-fzK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="AtD-Ji-lfu" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="913.04347826086962" y="-29.464285714285712"/>
+        </scene>
+        <!--Result View Controller-->
+        <scene sceneID="un8-UO-tiU">
+            <objects>
+                <viewController id="D0W-rO-dph" customClass="ResultViewController" customModule="lab2_ChildView" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HHM-QK-wEM">
+                        <rect key="frame" x="0.0" y="0.0" width="400" height="400"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oie-Hd-oJm">
+                                <rect key="frame" x="0.0" y="0.0" width="400" height="400"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="D06-ka-fhd"/>
+                    </view>
+                    <connections>
+                        <outlet property="result" destination="oie-Hd-oJm" id="X0v-Kg-Vji"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="k8a-3K-Njy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="911.59420289855075" y="304.6875"/>
+        </scene>
+    </scenes>
+</document>
